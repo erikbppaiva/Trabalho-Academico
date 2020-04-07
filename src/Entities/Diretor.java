@@ -1,25 +1,13 @@
 package Entities;
 
+import Leitor.Leitor;
+
 public class Diretor extends Funcionario {
 
-	double media;
-	double soma;
-	
-	
-	public double getMedia() {
-		return media;
-	}
-
-	public void setMedia(double media) {
-		this.media = media;
-	}
-
-	public double getSoma() {
-		return soma;
-	}
-
-	public void setSoma(double soma) {
-		this.soma = soma;
+	public void addDir() {
+		setNome(Leitor.lerString("Nome: "));
+		setCpf(Leitor.lerString("CPF: "));
+		setSalario(Leitor.lerDouble("Salário: "));
 	}
 
 	public Diretor(int matricula) {
@@ -30,14 +18,14 @@ public class Diretor extends Funcionario {
 	public double getImpostoDeRenda() {
 		return getSalario() * 0.23;
 	}
+
 	@Override
 	public String toString() {
 
-		return "";
+		return 
 
-		// "Diretor: " + "Nome: " + getNome() + " CPF: " + getCpf() +
-		// " Matricula: " + getMatricula() + " Salario: " + getSalario()
-		// + " Imposto: " + getImpostoDeRenda();
-	}
+		 "Diretor: " + "\tNome: "+getNome()+"\t CPF: "+getCpf()+
+			"\tSalario: " + getSalario() +"\tImposto: " +getImpostoDeRenda();
+		}
 
 }

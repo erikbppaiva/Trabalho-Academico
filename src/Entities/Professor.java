@@ -1,11 +1,21 @@
 package Entities;
 
+import Leitor.Leitor;
+
 public class Professor extends Funcionario{
 	
 	
 	public Professor(int matricula) {
 		super(matricula);
 	}
+	
+	public void addProf(){
+		setNome(Leitor.lerString("Nome: "));
+		setCpf(Leitor.lerString("CPF: "));
+		setSalario(Leitor.lerDouble("Salário: "));
+	
+	}
+
 	
 	@Override
 	public double getImpostoDeRenda() {
@@ -14,8 +24,8 @@ public class Professor extends Funcionario{
 	
 	@Override
 	public String toString() {
-		return "PROFESSOR: "+ 
-				"Salario: " + getSalario() +" Imposto: " +getImpostoDeRenda();
+		return "PROFESSOR: "+ "\tNome: "+getNome()+"\t CPF: "+getCpf()+
+				"\tSalario: " + getSalario() +"\tImposto: " +getImpostoDeRenda();
 	}
 
 	
