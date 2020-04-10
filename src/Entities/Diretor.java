@@ -22,10 +22,10 @@ public class Diretor extends Funcionario {
 	@Override
 	public String toString() {
 
-		return 
+		return
 
-		 "Diretor: " + "\tNome: "+getNome()+"\t CPF: "+getCpf()+
-			"\tSalario: " + getSalario() +"\tImposto: " +getImpostoDeRenda();
-		}
+		"Diretor: " + "\tNome: " + getNome() + "\t CPF: " + getCpf() + "\tSalario: " + getSalario() + "\tImposto: "
+				+ getImpostoDeRenda();
+	}
 
 }
